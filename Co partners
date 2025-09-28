@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int seat = sc.nextInt();
+        
+        // Seat position in the block of 8
+        int pos = (seat - 1) % 8 + 1;
+        int base = seat - pos;  // starting point of this block
+        
+        int partner = 0;
+        String berth = "";
+        
+        switch(pos) {
+            case 1: partner = base + 4; berth = "LB"; break;
+            case 2: partner = base + 5; berth = "MB"; break;
+            case 3: partner = base + 6; berth = "UB"; break;
+            case 4: partner = base + 1; berth = "LB"; break;
+            case 5: partner = base + 2; berth = "MB"; break;
+            case 6: partner = base + 3; berth = "UB"; break;
+            case 7: partner = base + 8; berth = "SU"; break;
+            case 8: partner = base + 7; berth = "SL"; break;
+        }
+        
+        System.out.println(partner + berth);
+    }
+}
