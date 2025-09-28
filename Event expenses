@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class EventExpenses {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Input expenses
+        double branding = sc.nextDouble();
+        double travel = sc.nextDouble();
+        double food = sc.nextDouble();
+        double logistics = sc.nextDouble();
+        
+        // Calculate total expenses
+        double total = branding + travel + food + logistics;
+        
+        // Print total expenses
+        System.out.printf("Total expenses: Rs.%.2f%n", total);
+        
+        // Print percentage of each expense
+        System.out.printf("Branding expenses percentage : %.2f%%%n", (branding / total) * 100);
+        System.out.printf("Travel expenses percentage : %.2f%%%n", (travel / total) * 100);
+        System.out.printf("Food expenses percentage : %.2f%%%n", (food / total) * 100);
+        System.out.printf("Logistics expenses percentage : %.2f%%%n", (logistics / total) * 100);
+        
+        sc.close();
+    }
+}
