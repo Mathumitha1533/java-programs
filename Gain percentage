@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class GainPercentage {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double price = sc.nextDouble();   // Price of scooter
+        double repair = sc.nextDouble();  // Repair charges
+        double selling = sc.nextDouble(); // Selling price
+
+        double costPrice = price + repair;
+        double gain = selling - costPrice;
+        double gainPercent = (gain / costPrice) * 100;
+
+        System.out.printf("%.2f%n", gainPercent);
+
+        sc.close();
+    }
+}
