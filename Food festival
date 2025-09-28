@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class FoodFestival {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read hall side
+        int y = sc.nextInt();
+        // Read table side
+        int x = sc.nextInt();
+
+        // Calculate remaining area
+        int carpetArea = (y * y) - (x * x);
+
+        // Print result
+        System.out.println(carpetArea);
+
+        sc.close();
+    }
+}
